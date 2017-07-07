@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title><ui:define name="title">Loja Virtual </ui:define></title>
+        <h:outputStylesheet name="css/bootstrap.min.css" />
+        <h:outputStylesheet name="css/meublog.css" />
+        <h:outputScript name="js/jquery.min.js" />
+        <h:outputScript name="js/bootstrap.min.js" />
+    </h:head>
+    <h:body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <h:form id="linksFrm">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <h:commandLink class="navbar-brand" action="/index.xhtml?faces-redirect=true">RL Infor Teen</h:commandLink>
+                    </div>
+                    <div id="navbar" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><h:commandLink class="active" action="/index.xhtml?faces-redirect=true">Home</h:commandLink></li>
+                            <li><h:commandLink action="/public/subscribe/edit.xhtml?faces-redirect=true">Cadastro</h:commandLink></li>
+                            <li><h:commandLink action="/public/subscribe/contact.xhtml?faces-redirect=true">Contato</h:commandLink></li>
+                            <li><h:commandLink action="/public/subscribe/about.xhtml?faces-redirect=true">Sobre</h:commandLink></li>
+                        </ul>
+                    </div>
+                </h:form>
+            </div>
+        </nav>
+
+        <div class="container">
+            <ui:insert name="content" />
+        </div>
+    </h:body>
+</html>
+
